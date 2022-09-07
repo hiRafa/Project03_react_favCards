@@ -17,6 +17,7 @@ const NewCardPage = (props) => {
       }
     ).then(() => {
       history.replace("/");
+      window.location.reload();
     });
   }
 

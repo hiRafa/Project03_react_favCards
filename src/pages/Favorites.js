@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import FavoritesContext from "../store/favorites-context";
 import CardsList from "../components/items/CardsList";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./somecss.module.css";
 
 const FavoritesPage = () => {
@@ -15,7 +15,14 @@ const FavoritesPage = () => {
         <button
           className={`${classes["btn-returnToHome"]} ${classes.returnhome}`}
         >
-          <Link to="/">Return to Cards List</Link>
+          <NavLink
+            to="/"
+            className={(isActive) =>
+              "nav-link" + (!isActive ? " unselected" : "")
+            }
+          >
+            Return to Cards List
+          </NavLink>
         </button>
       </div>
     );

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./ui.module.css";
 import FavoritesContext from "../../store/favorites-context";
 
@@ -61,9 +61,9 @@ const MainNavigation = () => {
         onClick={() => clickTab(id)}
         className={isActive ? classes.active : ""}
       >
-        <Link to={href}>
+        <NavLink to={href}>
           {tabTitle} {counter}
-        </Link>
+        </NavLink>
       </li>
     );
   };
