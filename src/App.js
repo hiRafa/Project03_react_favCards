@@ -34,6 +34,7 @@ function App() {
         <Route path="/" exact>
           <AllCardsPage />
         </Route>
+
         <Route path="/home">
           <AllCardsPage />
         </Route>

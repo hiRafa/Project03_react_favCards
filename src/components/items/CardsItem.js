@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-
 import FavoritesContext from "../../store/favorites-context";
 import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
