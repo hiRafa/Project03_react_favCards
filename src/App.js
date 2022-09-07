@@ -21,7 +21,7 @@ function App() {
       {modalIsOpen && (
         <Modal>
           <h3>
-            Welcome to this GALLERY webapp your favorite stuff with images,
+            Welcome to this GALLERY webapp. Add your favorite stuff with images,
             rank, title and short descriptions.
           </h3>
           <ButtonClose txt="Proceed" onClose={closeModalHandler}></ButtonClose>
@@ -31,7 +31,10 @@ function App() {
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
 
       <Switch>
-        <Route path="/home" exact>
+        <Route path="/" exact>
+          <AllCardsPage />
+        </Route>
+        <Route path="/home">
           <AllCardsPage />
         </Route>
         <Route path="/new-card">
