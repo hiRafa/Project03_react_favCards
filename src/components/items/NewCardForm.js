@@ -3,7 +3,6 @@ import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
 
 const NewCardForm = (props) => {
-  // const [rankIsValid, setRankIsValid] = useState(false);
   // Reference Object
   const titleInput = useRef();
   const imageInput = useRef();
@@ -27,14 +26,7 @@ const NewCardForm = (props) => {
       description: enteredDescription,
     };
 
-    // console.log(cardData);
     props.onAddCard(cardData);
-    // console.log(cardData.rank);
-    // if (cardData.rank >= 1 && cardData.rank <= 5) {
-    //   setRankIsValid(true);
-    // } else {
-    //   return;
-    // }
   }
 
   return (
