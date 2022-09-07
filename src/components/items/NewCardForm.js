@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
 
 const NewCardForm = (props) => {
+  const [rankIsValid, setRankIsValid] = useState(false);
   // Reference Object
   const titleInput = useRef();
   const imageInput = useRef();
@@ -25,11 +26,17 @@ const NewCardForm = (props) => {
       rank: enteredRank,
       description: enteredDescription,
     };
-
-    console.log(cardData);
-
+    
+    // console.log(cardData);
     props.onAddCard(cardData);
+    console.log(cardData.rank);
+    if (cardData.rank >= 1 && cardData.rank <= 5) {
+      setRankIsValid(true);
+    } else {
+      return;
+    }
   }
+
   return (
     <CardWrapper>
       <form className={classes.form} onSubmit={submitHandler}>

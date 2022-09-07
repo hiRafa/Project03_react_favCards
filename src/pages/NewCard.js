@@ -19,6 +19,7 @@ const NewCardPage = (props) => {
       history.replace("/");
     });
   }
+
   return (
     <section>
       <NewCardForm onAddCard={addCardHandler} />

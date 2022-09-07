@@ -7,7 +7,15 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  background-color: #fcf3f6;
+  background: rgb(232, 129, 96);
+  background: rgb(232, 129, 96);
+  background: rgb(240, 233, 193);
+  background: rgb(240, 233, 193);
+  background: linear-gradient(
+    180deg,
+    rgba(240, 233, 193, 1) 7%,
+    rgba(101, 218, 198, 0.31414572665003504) 100%
+  );
 }
 
 h1 {
@@ -20,29 +28,55 @@ h2 {
   color: #2c292b;
 }
 
+button {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  color: #e0a361;
+  border: 1px solid #e0a361;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #f9dbbb;
+}
+
+button:active {
+  background-color: black;
+  transition: background-color 0.2s;
+}
+
+button .remove {
+  background-color: #e0a361;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
 .btn {
   font: inherit;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   border-radius: 4px;
-  background-color: #800040;
+  background-color: #e0a361;
   color: white;
-  border: 1px solid #800040;
+  border: 1px solid #e0a361;
   margin: 0 1rem;
 }
 
 .btn:hover {
   background-color: #f0e9c1;
   border-color: #f0e9c1;
-}
-
-.btn--alt {
-  background-color: transparent;
-  color: #800040;
-}
-
-.btn--alt:hover {
-  background-color: #f8dae9;
 }
 
 .card {

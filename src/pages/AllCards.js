@@ -22,7 +22,7 @@ const AllCardsPage = () => {
             id: key,
             ...data[key],
           };
-
+          // console.log(eachCard.id);
           cards.push(eachCard);
         }
 

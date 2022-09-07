@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import FavoritesContext from "../../store/favorites-context";
 import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
 
-const CardsItem = (props) => {
-  const { id, image, title, rank, description } = props.card;
+const CardsItem = (cards, props) => {
+  const { id, image, title, rank, description } = cards.card;
 
   // use Context connects the data in the createcontext file with the file where it's been called(here)
   // can't use the same name
@@ -27,8 +28,24 @@ const CardsItem = (props) => {
     }
   }
 
+  const history = useHistory();
+  const [cardsLeft, setCardsLeft] = useState(cards);
+  console.log(cardsLeft.card);
+
+  function removeCardHandler(id) {
+    fetch(
+      `https://project04favoritecards-default-rtdb.asia-southeast1.firebasedatabase.app/cards/${id}.json`,
+      {
+        method: "DELETE",
+      }
+    ).then(() => {
+      setCardsLeft(true);
+      window.location.reload();
+    });
+  }
+
   return (
-    <CardWrapper>
+    <CardWrapper customClass={cardIsFav ? "ego" : null}>
       <li className={classes.item}>
         <div className={classes.image}>
           <img src={image} alt={title} />
@@ -38,10 +55,17 @@ const CardsItem = (props) => {
           <p>{rank}</p>
           <p>{description}</p>
         </div>
-        <div className={classes.actions}>
+        <div
+          className={`${classes.actions} ${
+            cardIsFav ? classes["actions_remove"] : ""
+          }`}
+        >
           <button onClick={toggleFavStatusHandler}>
             {cardIsFav ? "Remove From Favorites" : "Add to Favorites"}
           </button>
+        </div>
+        <div className={`${classes.actions} ${classes["actions_detele"]}`}>
+          <button onClick={() => removeCardHandler(id)}>Delete Card</button>
         </div>
       </li>
     </CardWrapper>

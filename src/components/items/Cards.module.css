@@ -41,16 +41,32 @@
 .actions button {
   font: inherit;
   cursor: pointer;
-  color: #77002e;
-  border: 1px solid #77002e;
-  background-color: transparent;
+  color: white;
+  border: 1px solid #e0a361;
+  background-color: #e0a361;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
 }
 
-.actions button:hover,
+.actions button:hover {
+  background-color: #f9dbbb;
+}
+
 .actions button:active {
-  background-color: #ffe2ed;
+  background-color: black;
+  transition: background-color 0.2s;
+}
+
+.actions_detele button {
+  color: #e0a361;
+  border: 1px solid #e0a361;
+  background-color: transparent;
+}
+
+.actions_remove button {
+  background-color: #65dac6;
+  color: white;
+  border-color: #65dac6;
 }
 
 /* Card form */
@@ -76,26 +92,4 @@
   border: 1px solid #ccc;
   padding: 0.25rem;
   width: 100%;
-}
-
-.actions {
-  margin-top: 1rem;
-  text-align: right;
-}
-
-.actions button {
-  font: inherit;
-  cursor: pointer;
-  background-color: #77002e;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #77002e;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.actions button:hover,
-.actions button:active {
-  background-color: #a50e48;
-  border-color: #a50e48;
 }

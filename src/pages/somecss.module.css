@@ -1,0 +1,8 @@
+.btn-returnToHome {
+  background-color: #e0a361;
+}
+.btn-returnToHome a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
