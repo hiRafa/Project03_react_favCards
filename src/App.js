@@ -31,7 +31,7 @@ function App() {
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
 
       <Switch>
-        <Route path="/" exact>
+        <Route path="/home" exact>
           <AllCardsPage />
         </Route>
         <Route path="/new-card">

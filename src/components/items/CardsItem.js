@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
+
 import FavoritesContext from "../../store/favorites-context";
 import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
 
-const CardsItem = (cards, props) => {
+const CardsItem = (cards) => {
+  // -------------- Favorites
   const { id, image, title, rank, description } = cards.card;
 
   // use Context connects the data in the createcontext file with the file where it's been called(here)
@@ -28,7 +29,6 @@ const CardsItem = (cards, props) => {
     }
   }
 
-  const history = useHistory();
   const [cardsLeft, setCardsLeft] = useState(cards);
   console.log(cardsLeft.card);
 
@@ -45,7 +45,7 @@ const CardsItem = (cards, props) => {
   }
 
   return (
-    <CardWrapper customClass={cardIsFav ? "ego" : null}>
+    <CardWrapper>
       <li className={classes.item}>
         <div className={classes.image}>
           <img src={image} alt={title} />

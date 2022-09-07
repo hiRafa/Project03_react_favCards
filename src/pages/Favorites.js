@@ -16,10 +16,8 @@ const FavoritesPage = () => {
           className={`${classes["btn-returnToHome"]} ${classes.returnhome}`}
         >
           <NavLink
-            to="/"
-            className={(isActive) =>
-              "nav-link" + (!isActive ? " unselected" : "")
-            }
+            to="/home"
+            // className={(isActive) => (isActive ? "nav_active" : "")}
           >
             Return to Cards List
           </NavLink>

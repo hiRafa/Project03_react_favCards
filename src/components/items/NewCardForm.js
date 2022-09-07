@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
 
