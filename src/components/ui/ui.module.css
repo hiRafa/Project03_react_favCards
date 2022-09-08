@@ -3,7 +3,7 @@
 .main {
   margin: 3rem auto;
   width: 90%;
-  max-width: 40rem;
+  max-width: 50rem;
 }
 
 /* Card */
@@ -11,12 +11,16 @@
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  width: 40%;
+  min-width: 20rem;
+}
+
+.card_wrapper-form {
+  width: 80%;
 }
 
 .card_wrapper_fav {
-  /* background-color: #f0e9c1; */
-  background-color: black;
+  background-color: #f0e9c1;
 }
 
 /* MainNavigation */
@@ -69,8 +73,4 @@
 .active a {
   font-weight: 700;
   color: black;
-}
-
-.ego {
-  background-color: #f0e9c1;
 }

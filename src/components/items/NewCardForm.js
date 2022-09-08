@@ -30,7 +30,7 @@ const NewCardForm = (props) => {
   }
 
   return (
-    <CardWrapper>
+    <CardWrapper formClass="card_wrapper-form">
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="title"> Title </label>

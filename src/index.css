@@ -30,6 +30,12 @@ h2 {
   color: #2c292b;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 button {
   padding: 1.5rem;
   text-align: center;

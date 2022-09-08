@@ -44,8 +44,10 @@ const CardsItem = (cards) => {
   }
 
   return (
-    <CardWrapper>
-      <li className={classes.item}>
+    // <CardWrapper customClass={cardIsFav ? "ego" : null}> either pass the result of the ternary operation, or
+    // pass the cardIsFav boolean through props(in this case customClass) to the card wrapper component and set the ternary operation there
+    <CardWrapper customClass={cardIsFav}>
+      <li>
         <div className={classes.image}>
           <img src={image} alt={title} />
         </div>
@@ -63,7 +65,7 @@ const CardsItem = (cards) => {
             {cardIsFav ? "Remove From Favorites" : "Add to Favorites"}
           </button>
         </div>
-        <div className={`${classes.actions} ${classes["actions_detele"]}`}>
+        <div className={`${classes.actions} ${classes["actions_delete"]}`}>
           <button onClick={() => removeCardHandler(id)}>Delete Card</button>
         </div>
       </li>

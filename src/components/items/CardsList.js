@@ -1,7 +1,6 @@
 import classes from "./Cards.module.css";
 import CardsItem from "./CardsItem";
 
-
 // cardsItems is an important prop
 const CardsList = (props) => {
   console.log(props);
