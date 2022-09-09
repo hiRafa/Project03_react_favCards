@@ -1,9 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import FavoritesContext from "../../store/favorites-context";
 import CardWrapper from "../ui/CardWrapper";
 import classes from "./Cards.module.css";
 
 const CardsItem = (cards) => {
+  const history = useHistory();
   // -------------- Favorites
   const { id, image, title, rank, description } = cards.card;
 
@@ -28,9 +30,6 @@ const CardsItem = (cards) => {
     }
   }
 
-  const [cardsLeft, setCardsLeft] = useState(cards);
-  console.log(cardsLeft.card);
-
   function removeCardHandler(id) {
     fetch(
       `https://project04favoritecards-default-rtdb.asia-southeast1.firebasedatabase.app/cards/${id}.json`,
@@ -38,8 +37,8 @@ const CardsItem = (cards) => {
         method: "DELETE",
       }
     ).then(() => {
-      setCardsLeft(true);
-      window.location.reload();
+      window.location.reload(true);
+      history.replace("/home");
     });
   }
 

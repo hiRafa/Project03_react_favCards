@@ -66,7 +66,7 @@ const MainNavigation = () => {
           {navTabs.map((navItem) => (
             <Nav
               {...navItem}
-              // key={navItem.id}
+              key={navItem.id}
               // to={navItem.href}
               // isActive={active === navItem.id}
               // onClick={clickTab}

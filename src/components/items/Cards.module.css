@@ -65,6 +65,10 @@
   background-color: transparent;
 }
 
+.actions_delete a {
+  font-size: 1rem;
+}
+
 .actions_remove button {
   background-color: #65dac6;
   color: white;
